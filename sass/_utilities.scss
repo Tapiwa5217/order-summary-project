@@ -1,0 +1,34 @@
+$font-weights: (
+    "light": 500,
+    "medium": 700,
+    "bold": 900
+);
+$primary-color: (
+    "Pale blue": hsl(225, 100%, 94%),
+    "Bright blue": hsl(245, 75%, 52%)
+);
+$neutral-colors: (
+   "Very pale blue": hsl(225, 100%, 98%),
+   "Desaturated blue": hsl(224, 23%, 55%),
+   "Dark blue": hsl(223, 47%, 23%)
+);
+
+%btn {
+    width: 100%;
+    display: inline-block;
+    font-weight: map-get($font-weights, "bold");
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+@mixin largerScreens {
+    @media  screen and (min-width: 440px) {
+        @content;
+    }
+}
+
+@mixin backgroundSettings($image) {
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-size: contain;
+};

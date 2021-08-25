@@ -1,0 +1,142 @@
+@import "general-styles";
+@import "utilities";
+
+.container {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: map-get($primary-color , "Pale blue" );
+    @include backgroundSettings("../images/pattern-background-mobile.svg");
+
+    .order-summary-box {
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 25px;
+
+        .hero-section {
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+
+            img {
+                border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            }
+        }
+        
+        .main-body {
+            background-color: #fff;
+            color: map-get($neutral-colors , "Desaturated blue" );
+            margin-top: -5px;
+            text-align: center;
+            padding: 20px 30px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+
+            h1 {
+                font-size: 1.2rem;
+                font-weight: map-get($font-weights , "bold" );
+                color: map-get($neutral-colors , "Dark blue" );
+            }
+
+            p  {
+                margin: 20px 0;
+            }
+
+            .payment-plan {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0;
+                padding: 15px;
+                border-radius: 15px;
+                background-color: map-get($neutral-colors,"Very pale blue");
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .annual-plan {
+                    margin: 0 20px;
+    
+                    h4 {
+                        color: map-get($neutral-colors, "Dark blue");
+                        font-weight: map-get($font-weights, "bold");
+                        letter-spacing: 0;
+                        white-space: nowrap;
+                        font-size: .9rem;
+                    }
+    
+                    p {
+                        margin: 0;
+                        font-size: .9rem;
+                    }
+                }
+
+                a {
+                    font-size: .8rem;
+                    font-weight: map-get($font-weights, "medium");
+                    color: map-get($primary-color , "Bright blue" );
+
+                    &:hover {
+                        text-decoration: none;
+                        color: map-get($neutral-colors, "Desaturated blue" );
+                    }
+                }
+            }
+
+            .button-section {
+                margin: 20px 0;
+
+                .btn:first-of-type {
+                    @extend %btn;
+                    color: #fff;
+                    border-radius: 10px;
+                    background-color: map-get($primary-color, "Bright blue");
+                    box-shadow: 0 20px  10px map-get($primary-color , "Pale blue" );
+                    margin-bottom: 20px;
+
+                    &:hover {
+                        background-color: map-get($neutral-colors, "Desaturated blue" );
+                    }
+                }
+
+                .btn:last-of-type {
+                    @extend %btn;
+                    padding: 0;
+                    color: map-get($neutral-colors, "Desaturated blue" );
+
+                    &:hover {
+                        color: map-get($neutral-colors, "Dark blue" );                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@include largerScreens {
+
+    .container {
+       @include backgroundSettings("../images/pattern-background-desktop.svg");
+
+       .order-summary-box {
+        max-width: 390px;
+
+        .main-body {
+
+         .payment-plan {
+            
+            justify-content: space-around;
+            
+        }
+    }
+}
+    }
+
+    
+}
+

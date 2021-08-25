@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.container .order-summary-box .main-body .button-section .btn:first-of-type, .container .order-summary-box .main-body .button-section .btn:last-of-type {
+  width: 100%;
+  display: inline-block;
+  font-weight: 900;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e0e8ff;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container .order-summary-box {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
+
+.container .order-summary-box .hero-section {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.container .order-summary-box .hero-section img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.container .order-summary-box .main-body {
+  background-color: #fff;
+  color: #7280a7;
+  margin-top: -5px;
+  text-align: center;
+  padding: 20px 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.container .order-summary-box .main-body h1 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+.container .order-summary-box .main-body p {
+  margin: 20px 0;
+}
+
+.container .order-summary-box .main-body .payment-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #f5f7ff;
+}
+
+.container .order-summary-box .main-body .payment-plan img {
+  width: 50px;
+  height: 50px;
+}
+
+.container .order-summary-box .main-body .payment-plan .annual-plan {
+  margin: 0 20px;
+}
+
+.container .order-summary-box .main-body .payment-plan .annual-plan h4 {
+  color: #1f2f56;
+  font-weight: 900;
+  letter-spacing: 0;
+  white-space: nowrap;
+  font-size: .9rem;
+}
+
+.container .order-summary-box .main-body .payment-plan .annual-plan p {
+  margin: 0;
+  font-size: .9rem;
+}
+
+.container .order-summary-box .main-body .payment-plan a {
+  font-size: .8rem;
+  font-weight: 700;
+  color: #3829e0;
+}
+
+.container .order-summary-box .main-body .payment-plan a:hover {
+  text-decoration: none;
+  color: #7280a7;
+}
+
+.container .order-summary-box .main-body .button-section {
+  margin: 20px 0;
+}
+
+.container .order-summary-box .main-body .button-section .btn:first-of-type {
+  color: #fff;
+  border-radius: 10px;
+  background-color: #3829e0;
+  box-shadow: 0 20px 10px #e0e8ff;
+  margin-bottom: 20px;
+}
+
+.container .order-summary-box .main-body .button-section .btn:first-of-type:hover {
+  background-color: #7280a7;
+}
+
+.container .order-summary-box .main-body .button-section .btn:last-of-type {
+  padding: 0;
+  color: #7280a7;
+}
+
+.container .order-summary-box .main-body .button-section .btn:last-of-type:hover {
+  color: #1f2f56;
+}
+
+@media screen and (min-width: 440px) {
+  .container {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .container .order-summary-box {
+    max-width: 390px;
+  }
+  .container .order-summary-box .main-body .payment-plan {
+    justify-content: space-around;
+  }
+}
