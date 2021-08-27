@@ -14,6 +14,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
+        font-size: .8rem;
         border-radius: 25px;
 
         .hero-section {
@@ -42,7 +43,7 @@
             }
 
             p  {
-                margin: 20px 0;
+                margin: 10px 0;
             }
 
             .payment-plan {
@@ -67,12 +68,12 @@
                         font-weight: map-get($font-weights, "bold");
                         letter-spacing: 0;
                         white-space: nowrap;
-                        font-size: .9rem;
+                        font-size: .8rem;
                     }
     
                     p {
                         margin: 0;
-                        font-size: .9rem;
+                        font-size: .8rem;
                     }
                 }
 
@@ -125,12 +126,23 @@
 
        .order-summary-box {
         max-width: 390px;
+        font-size: 1rem;
 
         .main-body {
 
          .payment-plan {
             
             justify-content: space-around;
+
+            .annual-plan {
+                h4 {
+                   font-size: .9rem;
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+            }
             
         }
     }
